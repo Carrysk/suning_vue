@@ -6,7 +6,7 @@ const session = require('express-session')
 
 
 var user = require('./router/user')
-var  product = require('./router/product')
+var product = require('./router/product')
 var cart = require('./router/cart')
 var index = require('./router/index')
 var detail = require('./router/detail')
@@ -17,12 +17,12 @@ var app = express()
 app.listen(3000)
 
 app.use(bodyParser.urlencoded({
-  extended: false
+	extended: false
 }))
 //配置跨域
 app.use(cors({
 	origin: 'http://localhost:8080',
-		credentials: true
+	credentials: true
 }))
 //session 配置
 app.use(session({
@@ -33,8 +33,8 @@ app.use(session({
 
 app.use(express.static('./public'))
 
-app.use('/user',user)
-app.use('/product',product)
-app.use('/cart',cart)
-app.use('/index',index)
-app.use('/detail',detail)
+app.use('/user', user)
+app.use('/product', product)
+app.use('/cart', cart)
+app.use('/index', index)
+app.use('/detail', detail)

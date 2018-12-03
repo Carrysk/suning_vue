@@ -11,6 +11,6 @@ export default new Router({
     { path: '/', component: IndexContainer },
     { path: '/index', name: 'IndexContainer', component: IndexContainer },
     { path: '/search', name: 'SearchContainer', component: SearchContainer },
-    { path: '/product/:pid', name: 'ProductContainer', component: ProductContainer }
+    { path: '/product/', name: 'ProductContainer', component: ProductContainer }
   ]
 })

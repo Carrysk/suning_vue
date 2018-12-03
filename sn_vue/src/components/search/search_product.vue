@@ -45,10 +45,14 @@ export default {
   },
   props: ["product"],
   methods: {
-    jumpProductDetail() {
+    jumpProductDetail(pid) {
       console.log('wo bei dian l')
       this.$router.push({
-        path:`/product/:${this.product.pid}`
+        // path:`/product/:${this.product.pid}`
+        name:'ProductContainer',
+        params:{
+          pid: this.product.pid
+        }
       });
     }
   }
