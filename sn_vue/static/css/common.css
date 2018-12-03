@@ -1,0 +1,43 @@
+body,div,ul,li,p,h1,h2,h3,h4,h5,h6,a,img,input,button,dl,dd,dt{
+	margin:0;
+	padding:0;
+}
+a{text-decoration:none;outline: none;}
+b{font-weight:400;}
+ul{list-style:none;}
+i,b,em{
+	font-style: normal;
+}
+input,button{
+	outline: none;
+	border:none;
+}
+
+img{border:0;}
+body{
+	font: 12px/1.5 "Microsoft Yahei",tahoma,arial,"Hiragino Sans GB";
+	background:#fff;
+	color:#999;
+	background:#f2f2f2;
+}
+header{
+	margin:0 auto;
+	position:relative;
+}
+a{
+	color:#666;
+}
+a:visited{
+	color: #666;
+}
+a:hover{
+	color:#f60;
+}
+.active{
+	color:#f60 !important;
+}
+.clear:after{
+	content:'';
+	display:block;
+	clear:both;
+}

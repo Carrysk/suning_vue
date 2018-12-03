@@ -1,0 +1,72 @@
+/*
+	头搜索
+*/
+div.top-header{
+  margin:0 auto;
+  width: 1190px;
+}
+
+div.top-logo,div.top-info,div.top-search{
+	float:left;
+}
+div.top-logo img{
+  width:190px;
+  height: 90px;
+}
+div.top-info{
+	width:160px;
+	height: 100px;
+}
+div.top-search{
+	margin-top:30px;
+	/* width:540px; */
+
+}
+div.top-search div.search-keyword{
+	width:420px;
+	height:40px;
+	border:2px solid #fa0;
+	padding-left:28px;
+	box-sizing:border-box;
+	float:left;
+}
+div.search-keyword input{
+	line-height:36px;
+	height:36px;
+	padding:0;
+	border:0;
+	outline:0;
+	color:#ccc;
+	font-size:12px;
+
+}
+input.btn{
+	width:120px;
+	height:40px;
+	line-height:40px;
+	border:0;
+	font-size:18px;
+	font-weight:700;
+	color:#fff;
+	background:#fa0;
+	float:left;
+}
+ul.search-word{
+	float:left;
+	width:540px;
+	height: 14px;
+	margin-top:8px;
+	color:#ccc;
+	overflow: hidden;
+}
+ul.search-word li:first-child{
+	padding-left:0;
+	border:0;
+}
+ul.search-word li{
+	float:left;
+	height:14px;
+	line-height:14px;
+	padding:0 10px;
+	border-left:1px solid #ddd;
+}

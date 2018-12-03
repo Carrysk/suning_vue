@@ -1,0 +1,51 @@
+footer{
+	width: 100%;
+	text-align: center;
+	position: relative;
+	background-color: #fff;
+}
+
+div.about{
+	margin: 10px auto 0;
+	width: 1190px;
+}
+div.about ul:after{
+	content: '';
+	display: block;
+	clear: left;
+}
+div.about ul li{
+	display: inline-block;
+	height:12px;line-height:12px;
+	margin:6px 0;
+	padding:0 8px;
+	font-size:12px;
+	color:#999;
+	border-right:1px solid #bbb;
+	font-family:"Microsoft Yahei";
+}
+div.about ul li:last-child{
+	border-right: 0;
+}
+div.about ul li a{
+	color: #666;
+}
+div.about ul li a:hover{
+	text-decoration: underline;	
+}
+div.about .gongan{
+	position: relative;
+	margin-left: 25px;
+}
+div.about .gongan span{
+	position: absolute;
+	left: -20px;
+	top:-3px;
+	display: inline-block;
+	width: 20px;height: 20px;
+	background: url('../img/footer/gwab-icon.png')
+}
+div.about ul:last-child li{
+	border-right: 0;
+	padding:0 2px;
+}

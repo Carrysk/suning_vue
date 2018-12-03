@@ -1,0 +1,159 @@
+.sidebar{
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 4;
+	width: 35px;
+	height: 100%;
+	background-color: #383838;
+}
+.sidebar .middle{
+	position: absolute;
+	top: 200px;
+	height: 350px;
+}
+.sidebar .middle .user-cart{
+	position: absolute;
+	top: 0;
+	width: 35px;
+}
+.sidebar i.tab-icon{
+	position: relative;
+	display: inline-block;
+	width: 35px; height: 30px;
+	background-color: #383838;
+	background-image:url(../img/index/sidebaricon.png);
+	z-index: 5;
+}
+.sidebar .middle .middle-bottom-tabs{
+	position: absolute;
+	bottom: 0;
+}
+.sidebar a:hover{
+	display: inline-block;
+	height: 30px;
+	background-color: #fa0;
+}
+.sidebar a:hover .tab-icon{
+	background-color: #fa0;
+}
+.sidebar .user{
+	padding-bottom: 6px;
+}
+.sidebar a:hover i.user-icon{
+	background-position: -26px 0;
+}
+.sidebar .cart{
+  border: 1px solid #4D4D4D;
+	border-width: 1px 0;
+	text-align: center;
+	cursor: pointer;
+}
+.sidebar .cart a{
+	display: inline-block;
+	padding: 3px 0 10px;
+	height: 106px;
+	color: #fff;
+}
+.sidebar .cart .cart-icon{
+	background-position: 2px -210px;
+}
+.sidebar .cart span.cart-title{
+	display: block;
+	margin: 0 auto;
+	width: 20px;
+}
+.sidebar .cart .cart-count{
+	display: block;
+	margin: 0 auto;
+	width:22px; height: 16px;line-height: 16px;
+	background: #d00;
+	border-radius: 5px;
+}
+.sidebar div.msg,.sidebar div.finance,.sidebar div.foot,.sidebar div.sign,.sidebar div.suggest,.sidebar div.code,.sidebar div.suggest{
+	height: 30px;
+}
+.sidebar>div>div a{
+	display: inline-block;
+	position: relative;
+	height: 30px;
+}
+.sidebar .msg span.msg,.sidebar .middle-bottom-tabs span,.sidebar .bottom>div span{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 47px; height: 30px;
+	letter-spacing: 1px;
+	line-height: 30px;
+	text-indent: 11px;
+	background: #fa0;
+	z-index: 3;
+	transition: left .3s ease;
+}
+.sidebar a:hover span.msg,.sidebar .middle-bottom-tabs a:hover span{
+	left:-47px;
+	color: #fff;
+}
+.sidebar .bottom>div a:hover span{
+	left:-78px;
+	color: #fff;
+}
+.sidebar .bottom>div span{
+	width: 78px;
+}
+.sidebar .bottom>div span.code{
+	position: absolute;
+	top: -150px;
+	left: -160px;
+	z-index: 0;
+	width: 160px;
+	height: 236px;
+	opacity: 0;
+	background: url(../img/index/aoyun-code.png) no-repeat;
+	transition: all 0.3s ease;
+}
+.sidebar .bottom>div.code a:hover .code-icon{
+	background-color: rgb(238, 10, 59);
+}
+.sidebar .bottom>div span.code img{
+	display: block;
+    width: 134px;
+    height: 134px;
+    margin: 58px auto 0;
+}
+.sidebar .bottom>div  a:hover span.code{
+	top:-200px;
+	left:-160px;
+	opacity: 1;
+}
+.sidebar .msg-icon{
+	background-position: 0 -23px;
+}
+.sidebar a:hover .msg-icon,.sidebar a:hover .finance-icon,.sidebar a:hover .foot-icon,.sidebar a:hover .sign-icon,.sidebar a:hover .chart-icon,.sidebar a:hover .suggest-icon,.sidebar a:hover .code-icon,.sidebar a:hover .toTop-icon{
+	background-position-x: -26px;
+}
+.sidebar .finance-icon{
+	background-position: 0 -47px;
+}
+.sidebar .foot-icon{
+	background-position: 0 -70px;
+}
+.sidebar .sign-icon{
+	background-position: 0 -93px;
+}
+.sidebar .chart-icon{
+	background-position: 0 -117px;
+}
+.sidebar .suggest-icon{
+	background-position: 0 -138px;
+}
+.sidebar .code-icon{
+	background-position: 0 -163px;
+}
+.sidebar .toTop-icon{
+	background-position: 0 -186px;
+}
+.sidebar .bottom{
+	position: absolute;
+	bottom: 40px;
+}

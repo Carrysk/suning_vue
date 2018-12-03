@@ -1,0 +1,278 @@
+body{
+	background: #fff;
+	color: #333;
+}
+header{
+	width: 990px;height: 100px;
+	margin: 0 auto;
+}
+header>a.logo{
+	float: left;
+	width: 189px;height: 100px;
+	background: url('../img/login/logo.png') no-repeat 0 20px;
+}
+header>div{
+	float: right;
+	margin: 35px -20px 0 0px;
+}
+header>div>p{
+	float: left;
+    color: #333;
+    background: #fefff1;
+    border: 1px solid #fecd66;
+    line-height: 16px;
+    padding: 4px 6px;
+}
+header>div+a{
+	float: right;
+	margin-top: 8px;
+	color: #333;
+}
+header>a>span{
+	float: left;
+	width: 18px;height: 18px;
+	margin-right: 10px;
+	background: url('../img/login/login.png') -67px -27px no-repeat;
+}
+section{
+	background: url('../img/login/bg.jpg') center 100px fixed;
+	height: 570px;
+}
+section .main{
+	margin: 0 auto;
+	width: 990px;height: 570px;
+	font-family:"Microsoft Yahei";
+}
+section .main>a{
+	float: left;
+	width: 570px; height: 570px;
+}
+.main .forms{
+	float: right;
+	margin-top: 50px;
+	width: 360px;height: 410px;
+	background: #fff;
+}
+.main .forms .login-tab{
+	height: 49px;
+	border-bottom: 1px solid #eee;
+}
+.forms .login-tab a{
+	float: left;
+	width: 180px;height: 49px;
+}
+.forms .login-tab a>span{
+	display: inline-block;
+	margin-top: 14px;
+	width: 179px;height: 20px;line-height: 20px;
+	border-right: 1px solid #eee;
+	font-size: 16px;
+	text-align: center;
+}
+.forms .login-tab a>i{
+	display: inline-block;
+	width: 70px;height: 0;
+	margin: 12px 0 0 54px;
+	border-bottom:3px solid #f60;
+	display: none;
+}
+.main .forms a:visited{
+	color: #333;
+}
+.main .forms a:hover{
+	color: #f60;
+}
+.forms .login-tab a.active span,.forms .login-tab a.active i{
+	color: #f60;
+	display: block;
+}
+.forms .pc-login{
+	width: 312px;height: 241px;
+	padding: 0 24px;
+}
+.forms .pc-login .uname-login{
+	width: 312px;
+}
+.pc-login .uname-login .blank{
+	width: 312px;height: 40px;
+}
+.pc-login .uname-login input{
+	width: 240px;height: 36px;line-height: 36px;
+	padding: 0 36px;
+	font-size: 14px;
+	outline: none;
+	border: none;
+	color: #333;
+}
+.pc-login .uname-login label{
+	position: absolute;
+	top: 0;left: 0;
+	width: 240px;height: 36px;line-height: 36px;
+	padding: 0 36px;
+	font-size: 14px;
+	color: #bbb;
+}
+.pc-login .uname-login .uname{
+	width: 312px;height: 36px;
+	border: 1px solid #eee;
+	position: relative;
+	margin-bottom: 20px;
+}
+.pc-login .uname-login .upwd{
+	width: 312px;height: 36px;
+	border: 1px solid #eee;
+	position: relative;
+	margin: 20px 0;
+}
+.pc-login .uname-login .uname i,.pc-login .uname-login .upwd i{
+	width: 36px;height: 36px;
+	position: absolute;
+	top: 0;left: 0;
+	background: url('../img/login/login.png') no-repeat;
+}
+.pc-login .uname-login .uname i{
+	background-position: -123px -67px;
+}
+.pc-login .uname-login .upwd i{
+	background-position: 0 -108px;
+}
+.pc-login .uname-login .uname em,.pc-login .uname-login .upwd em{
+	width: 36px;height: 36px;
+	position: absolute;
+	top: 0;right: 0;
+	background: url('../img/login/login.png') -82px -108px no-repeat;
+}
+.pc-login .login-help{
+	margin-top: 20px;
+	width: 312px;height: 45px;
+}
+.pc-login .login-help .mesg{
+	float: left;
+	margin-top: 14px;
+	height: 16px;line-height: 16px;
+	color: #333;
+}
+.pc-login .login-help .mesg i{
+	float: left;
+	width: 13px;height: 16px;
+	margin-right: 5px;
+	background: url('../img/login/login.png') 0 -149px no-repeat
+}
+.pc-login .login-help .forgot{
+	float: right;
+	height: 45px;line-height: 45px;
+	color: #333;
+}
+.pc-login .login-btn{
+	width: 312px;height: 40px;
+}
+.pc-login .login-btn a{
+	display: inline-block;
+	width: 312px; height: 40px;line-height:40px;
+	font-size: 20px;font-weight: 700;
+	background:#f60;
+	color: #fff;
+	text-align: center;
+}
+.pc-login .login-btn a:visited{
+	color:#fff;
+}
+.pc-login .login-btn a:hover{
+	color: #fff;
+	background: #f50;
+}
+.forms .registry{
+	margin: 18px 0 35px 0;
+}
+.forms .registry a{
+	display: inline-block;
+	width: 360px;
+	color: #333;
+	text-align: center;
+}
+.forms .bind-login{
+	margin: 0 auto;
+	width: 310px;height: 16px;
+	padding: 19px 0 17px 0;
+	position: relative;
+	border-top: 1px solid #eee;
+}
+.forms .bind-login span{
+	position: absolute;
+	width: 128px;height: 18px; line-height: 18px;
+	background: #fff;
+	top: -9px;
+	left: 50%;
+	margin-left: -64px;
+	color: #bbb;
+	text-align: center;
+}
+.forms .bind-login a{
+	float: left;
+	height: 14px;line-height: 14px;
+	font-size: 12px;
+	padding: 0 6px;
+	border-right: 1px solid #ddd;
+	color: #333;
+}
+.forms .bind-login a i{
+	float: left;
+	width: 16px; height: 16px;
+	margin-right: 5px;
+}
+.forms .bind-login a.qq i{
+	background: url('../img/login/login.png') -90px -27px;
+}
+.forms .bind-login a.wx i{
+	background: url('../img/login/login.png') -161px -108px;
+}
+.forms .bind-login a.yfb i{
+	background: url('../img/login/login.png') -119px -108px;
+}
+
+footer{
+	width: 990px;
+	margin: 20px auto 0 auto;
+	text-align: center;
+	position: relative;
+}
+footer ul:after{
+	content: '';
+	display: block;
+	clear: left;
+}
+footer ul li{
+	display: inline-block;
+	height:12px;line-height:12px;
+	margin:6px 0;
+	padding:0 8px;
+	font-size:12px;
+	color:#ccc;
+	border-right:1px solid #bbb;
+	font-family:"Microsoft Yahei";
+}
+footer ul li:last-child{
+	border-right: 0;
+}
+footer ul li a{
+	color: #666;
+}
+footer ul li a:hover{
+	text-decoration: underline;	
+}
+footer .gongan{
+	position: relative;
+	margin-left: 25px;
+}
+footer .gongan span{
+	position: absolute;
+	left: -20px;
+	top:-3px;
+	display: inline-block;
+	width: 20px;height: 20px;
+	background: url('../img/login/gwab-icon.png')
+}
+footer ul:last-child li{
+	border-right: 0;
+	padding:0 2px;
+}

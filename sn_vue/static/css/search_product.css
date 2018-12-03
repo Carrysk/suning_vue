@@ -1,0 +1,126 @@
+
+
+/* .product_list .clear{
+  content: '';
+  display: block;
+  clear: both;
+} */
+ .product_item{
+  float: left;
+  margin: 10px 5px;
+  padding: 29px 14px 14px;
+  width: 240px;
+}
+ .product_item>img{
+  width: 240px;
+  height: 240px;
+}
+ .product_item .shrink_img{
+  margin: 4px 0;
+  width: 240px;
+  height: 32px;
+}
+.product_item .shrink_img img{
+  height: 30px;
+  width: 30px;
+  border: 1px solid #fff;
+}
+.product_item .shrink_img .active{
+  border-color: #f60;
+}
+.product_item .price{
+  margin-top: 10px;
+  color: #f60;
+  font-size: 12px;
+  height: 22px;
+  line-height: 20px;
+  font-family: Tahoma;
+}
+.product_item .price i{
+  font-size: 22px;
+  font-weight: bold;
+}
+.product_item .title{
+  display: inline-block;
+  width: 240px;
+  margin-top: 10px;
+  color: #333;
+}
+.product_item .evaluate{
+  margin-top: 8px;
+  font-size: 12px;
+  color: #999;
+}
+.product_item .evaluate>i{
+  color: #2272c8;
+  margin-right: 2px;
+  font-weight: bold;
+}
+.product_item .isSn{
+  display: inline-block;
+  margin-top: 6px;
+  color: #f60;
+  height: 18px; line-height: 18px;
+  font-size: 12px;
+  padding: 0 4px;
+  border: 1px solid #f60;
+}
+.product_item .favour{
+  margin-top: 6px;
+}
+.product_item .favour>a{
+  display: inline-block;
+  margin-right: 2px;
+  padding: 0 4px;
+  font-size: 12px;
+  color: #fff;
+  background: #f50;
+  border-radius: 2px;
+}
+.product_item .btn{
+  margin-top: 10px;
+  width: 240px;
+  height: 30px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+.product_item .btn>a{
+  float: left;
+  padding: 9px 0;
+  height: 12px;line-height: 12px;
+  font-size: 12px;
+  text-align: center;
+}
+.product_item .btn .contrast{
+  width: 72px;
+  border-right: 1px solid #ddd;
+}
+.product_item .btn .collect{
+  border-right: 1px solid #ddd;
+  width: 72px;
+}
+.product_item .btn .addCart{
+  width: 92px;
+}
+.product_item .btn a>i{
+  display: inline-block;
+  margin: 0 2px 0 0;
+  vertical-align: top;
+  overflow: hidden;
+  width: 12px;
+  height: 12px;
+  background: url(../img/search/icon/search_png.png) no-repeat;
+}
+.product_item .btn .contrast i{
+  background-position: -40px -258px;
+}
+.product_item .btn .collect i{
+  background-position: -259px -212px;
+}
+.product_item .btn .addCart i{
+  background-position: -135px -208px;
+}
+.product_list .product_item:hover{
+  box-shadow: 0 0 2px 2px #ddd;
+  border-radius: 3px;
+}

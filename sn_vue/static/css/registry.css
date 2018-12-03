@@ -1,0 +1,235 @@
+body{
+	background: #f8f8f8;
+	color: #333;
+	font-family:"Microsoft Yahei";
+}
+header{
+	width: 990px;height: 100px;
+	margin: 0 auto;
+}
+header>a.logo{
+	float: left;
+	width: 189px;height: 100px;
+	background: url('../img/registry/registry.png') no-repeat 0 10px;
+}
+header>p{
+	float: left;
+	margin: 35px 0 0 20px;
+	font-size: 18px;
+}
+header>p+a{
+	float: right;
+	margin-top: 75px;
+	color: #333;
+}
+
+
+section{
+    width: 990px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-top: 3px solid #f90;
+    background: #fff;
+    padding: 55px 0;
+    line-height: 1.5;
+}
+section form{
+	margin: 0 305px;
+	width: 380px; height: 345px;
+}
+form p.gift{
+	margin-bottom: 17px;
+	width: 345px; height: 17px;
+	line-height: 17px;font-size: 14px;
+}
+form p.gift i{
+	float: left;
+	margin-right: 6px;
+	width: 19px; height: 17px;
+	background: url('../img/registry/registry.png') -75px -93px no-repeat;
+}
+form p.gift em{
+	color: #f60;
+}
+form .form-input{
+	width: 305px;
+}
+form .form-input .in{
+	width: 378px;height: 38px;
+	line-height: 38px;
+	border: 1px solid #ccc;
+	position: relative;
+}
+form .form-input .in span{
+	float: left;
+	margin-left: 11px;
+	width: 76px; height: 38px;
+}
+form .form-input .in label{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 291px;height: 38px;
+	font-size: 12px;
+	color: #ccc;
+	z-index: 1;
+}
+form .form-input .in input{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 291px;height: 38px;line-height: 38px;
+	font-size: 14px;
+}
+form .form-input.phone-verify .ok{
+	right: 160px;
+}
+form .form-input.phone-verify a:last-child{
+	position: absolute;
+	top: -1px;
+	right: -1px;
+	width: 148px; height: 38px;
+	border: 1px solid #bbb;
+	background: #f5f5f5;
+	text-align: center;
+	font-size: 14px;
+}
+form .form-input .in .ok{
+	display: none;
+	position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 11px;
+    right: 12px;
+    background: url(../img/registry/registry.png) -120px -93px no-repeat
+}
+/*****************  验证  ********************/
+form .form-input .tip{
+	visibility: hidden;
+	color: #f00;
+	width: 380px;
+}
+form .phone-number div.tip{
+	height: 24px;line-height: 24px;
+}
+form .phone-verify div.tip{
+	height: 32px;line-height: 32px;
+}
+form .pwd div.tip{
+	height: 50px;line-height: 20px;
+}
+form .pwd div.tip .errorTip{
+	display: none;
+}
+form .pwd div.tip .importTip{
+	visibility: hidden;
+	color: #999;
+}
+form .pwd div.tip a{
+	color: #333;
+}
+form .pwd div.tip .safeRank{
+	width: 380px;height: 22px;line-height: 22px;
+	color: #333;
+}
+form .pwd div.tip .safeRank span{
+	display: inline-block;
+	width: 50px; height: 16px;line-height: 16px;
+	margin-left: 2px;
+	text-align: center;
+	color: #fff;
+	background: #cacaca;
+}
+form .pwd div.tip .safeRank .act{
+	background: #fa0;
+}
+form .rule{
+	width: 380px;height: 20px;line-height: 20px;
+}
+form .rule input {
+	float: left;
+	margin: 4px 3px 0 0;
+}
+form .rule a{
+	color: #222;
+}
+form .rule a:hover{
+	color: #f60;
+}
+form .submit{
+	width: 100%;
+    line-height: 40px;
+    background: #f60;
+    font-size: 20px;
+    color: #fff;
+    margin: 24px 0 5px;
+    border: none;
+    border-radius: 3px;
+}
+form a.etp{
+	float: left;
+	font-size: 14px;
+	color: #f50;
+}
+form a.etp i{
+	float: left;
+    width: 17px;
+    height: 15px;
+    background: url(../img/registry/registry.png) -141px -93px no-repeat;
+    margin: 3px 5px 0 0;
+}
+
+
+
+
+
+
+
+
+
+footer{
+	width: 990px;
+	margin: 20px auto 0 auto;
+	text-align: center;
+	position: relative;
+}
+footer ul:after{
+	content: '';
+	display: block;
+	clear: left;
+}
+footer ul li{
+	display: inline-block;
+	height:12px;line-height:12px;
+	margin:6px 0;
+	padding:0 8px;
+	font-size:12px;
+	color:#ccc;
+	border-right:1px solid #bbb;
+	font-family:"Microsoft Yahei";
+}
+footer ul li:last-child{
+	border-right: 0;
+}
+footer ul li a{
+	color: #666;
+}
+footer ul li a:hover{
+	text-decoration: underline;	
+}
+footer .gongan{
+	position: relative;
+	margin-left: 25px;
+}
+footer .gongan span{
+	position: absolute;
+	left: -20px;
+	top:-3px;
+	display: inline-block;
+	width: 20px;height: 20px;
+	background: url('../img/login/gwab-icon.png')
+}
+footer ul:last-child li{
+	border-right: 0;
+	padding:0 2px;
+}
