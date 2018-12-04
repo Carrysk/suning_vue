@@ -124,7 +124,7 @@
 			</ul>
 			<ul class='top-right'>
 				<li>
-					<a href="login.html">请登录</a>
+					<a href="login.html" @click.prevent.stop="login">请登录</a>
 				</li>
 				<li>
 					<a href="registry.html" class='active'>注册有礼</a>
@@ -146,7 +146,7 @@
 						<p class='clear'>
 							<a href="#" class='logo'></a>
 							<b class='login'>
-								<a href='#'>请登录</a>
+								<a href='#' @click.prevent.stop='login'>请登录</a>
 								<button>点击打卡</button>
 							</b>
 							
@@ -212,7 +212,17 @@ export default {
 			// isLarge: false
 		};
 	},
-	props:[ 'isLarge', 'isIndex']
+	props:[ 'isLarge', 'isIndex'],
+	methods:{
+		login(){
+			this.$router.push({
+				name:'LoginContainer',
+				params:{
+					from: this.$route.path
+				}
+			})
+		}
+	}
 };
 </script>
 <style scoped>

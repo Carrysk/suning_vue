@@ -561,12 +561,28 @@ section.main .left_main{
 	width: 451px;
 	z-index:10;
 }
+.main .left_main .zoomImg .supermask{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 20;
+	width: 450px;
+	height: 450px;
+}
 .zoomImg .mdImg{
+	position: relative;
 	width: 450px; height: 450px;
 	border: 1px solid #eee;
 }
 .zoomImg .mdImg img{
 	width: 100%;
+}
+.zoomImg .mdImg .mask{
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	background-color: rgba(255, 255, 111, 0.356);
+	display:none;
 }
 .zoomImg .lgImg{
 	position: absolute;
@@ -574,7 +590,6 @@ section.main .left_main{
 	left: 452px;
 	width: 400px; height: 400px;
 	overflow: hidden; 
-	display: none;
 }
 .zoomImg .lgImg img{
 	position: absolute;

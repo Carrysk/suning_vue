@@ -9,6 +9,7 @@ import VueLazyLoad from 'vue-lazyload'
 Vue.config.productionTip = false
 
 axios.defaults.baseURL = 'http://127.0.0.1:3000/'
+axios.defaults.headers.post['Content-Type'] = 'application/x-www.form-urlencoded'
 Vue.prototype.$axios = axios
 
 //引入lazyload

@@ -22,6 +22,6 @@ export default {
 <style>
 @import "../static/css/common.css";
 #app {
-  background-color: #fff;
+  background-color: #f7f7f7;
 }
 </style>

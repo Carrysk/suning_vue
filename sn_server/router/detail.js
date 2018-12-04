@@ -27,7 +27,7 @@ router.get('/getDetails', (req, res) => {
     if (err) throw err
     for (var i = 0, len = result.length; i < len; i++) {
       result[i].sm = 'http://127.0.0.1:3000/' + result[i].sm
-      result[i].lg = 'http://127.0.0.0:3000/' + result[i].lg
+      result[i].lg = 'http://127.0.0.1:3000/' + result[i].lg
     }
     output.pic = result
     progress += 25;

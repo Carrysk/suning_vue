@@ -10,12 +10,14 @@
           </a>
           <div class="shop">
             <div class="shop_name">
-              <a href="#">苏宁Apple产品专营店
+              <a href="#">
+                苏宁Apple产品专营店
                 <i class="sn_shop"></i>
               </a>
             </div>
             <div class="shop_score">
-              <a href="#">店铺评分
+              <a href="#">
+                店铺评分
                 <i>4.94</i>
               </a>
             </div>
@@ -68,7 +70,8 @@
       <nav class="nav">
         <div class="shop_nav">
           <div class="left_nav drop-btn">
-            <a href="#">本店全部产品
+            <a href="#">
+              本店全部产品
               <span class="left-list-icon">
                 <i></i>
                 <i></i>
@@ -136,20 +139,25 @@
     <section class="main clear">
       <div class="left_main">
         <div class="zoomImg">
+          <div
+            class="supermask"
+            @mousemove.prevent.stop="moveImgMask"
+            @mouseleave.prevent.stop="leaveImgMask"
+          ></div>
           <div class="mdImg">
             <a href="#">
-              <img src="img/products/lg/iPhoneXR41.jpg">
+              <img v-if="activeImgSrc" :src="activeImgSrc">/
             </a>
-            <div class="mask"></div>
+            <div class="mask" :style="canMove?moveMask:''"></div>
           </div>
-          <div class="lgImg">
-            <img src="img/products/lg/iPhoneXR41.jpg">
+          <div class="lgImg" v-show='canMove'>
+            <img v-if="activeImgSrc" :src="activeImgSrc" :style="canMove?lgImg:''">
           </div>
           <div class="smImg">
             <ul>
-              <li v-for='(tmp,i) of pic' :key='tmp.picId' :class="activeImg==i?'active_img':''">
+              <li v-for="(tmp,i) of pic" :key="tmp.picId" :class="activeImg==i?'active_img':''">
                 <a href="#">
-                  <img :src="tmp.sm">
+                  <img :src="tmp.sm" @mouseenter.prevent.stop="changeImg(i)">
                 </a>
               </li>
             </ul>
@@ -188,15 +196,18 @@
           <div class="card">
             <img :src="server+'img/products/details_shop/1537896376025.png'">
             <div class="desc">
-              <p class="name">王洋
+              <p class="name">
+                王洋
                 <span class="star">
                   <em></em>
                 </span>
-                <span class="jiedan">已接
+                <span class="jiedan">
+                  已接
                   <i>366</i>单
                 </span>
               </p>
-              <p class="sn_shop">苏宁易购
+              <p class="sn_shop">
+                苏宁易购
                 <span>(韩城黄河大街店)</span>
               </p>
               <a href="#" class="moreSn">更多门店 ></a>
@@ -208,9 +219,10 @@
       <div class="right_main">
         <div class="right_title">
           <h1>
-            <span class="isSn">自营</span>{{details[0].title}}
+            <span class="isSn">自营</span>
+            {{details[0].title}}
           </h1>
-          <h2 v-text='details[0].subtitle'>A12仿生处理器-6.1英寸-128GB内存-全面屏-面容识别-双卡双待</h2>
+          <h2 v-text="details[0].subtitle">A12仿生处理器-6.1英寸-128GB内存-全面屏-面容识别-双卡双待</h2>
         </div>
         <div class="right_activity">
           <div class="djh"></div>
@@ -228,7 +240,8 @@
           <div class="row money">
             <div class="row_left w3">活动价</div>
             <div class="row_right">
-              <p>￥
+              <p>
+                ￥
                 <span>{{details[0].price}}.00</span>
               </p>
               <p>
@@ -260,7 +273,8 @@
               <p>
                 <span class="yz">云钻</span>
                 <i></i>
-                <span>普通会员返
+                <span>
+                  普通会员返
                   <a href="#">1049</a>云钻
                 </span>
               </p>
@@ -325,11 +339,11 @@
             <div class="row_left w2">颜色</div>
             <div class="row_right">
               <ul class="color">
-                <li v-for='(tmp,i) of colors' :key='i' :class="tmp==details[0].color ? 'active':''" >
+                <li v-for="(tmp,i) of colors" :key="i" :class="tmp==details[0].color ? 'active':''">
                   <a href="#">
                     <img v-lazy="pic[4].sm">
                     <i></i>
-                    <span v-text='tmp'>黑色</span>
+                    <span v-text="tmp">黑色</span>
                   </a>
                 </li>
               </ul>
@@ -339,12 +353,12 @@
             <div class="row_left w2">版本</div>
             <div class="row_right">
               <ul>
-								<li v-for='(tmp,i) of size' :key='i' :class="tmp==details[0].size?'active':''">
-									<a href="#">
-										<i></i>
-										<span v-text='tmp'>128GB</span>
-									</a>
-								</li>
+                <li v-for="(tmp,i) of size" :key="i" :class="tmp==details[0].size?'active':''">
+                  <a href="#">
+                    <i></i>
+                    <span v-text="tmp">128GB</span>
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -373,29 +387,29 @@
               <ul>
                 <li>
                   <a href>
-                    <span>￥2402.99x3期</span>
+                    <span>￥{{(details[0].price/3).toFixed(2)}}x3期</span>
                   </a>
                 </li>
                 <li>
                   <a href>
-                    <span>￥1232.99x6期</span>
+                    <span>￥{{(details[0].price/6).toFixed(2)}}x6期</span>
                   </a>
                 </li>
                 <li>
                   <a href>
-                    <span>￥649.74x12期</span>
+                    <span>￥{{(details[0].price/12).toFixed(2)}}x12期</span>
                   </a>
                 </li>
                 <li>
                   <a href>
-                    <span>￥361.61x24期</span>
+                    <span>￥{{(details[0].price/24).toFixed(2)}}x24期</span>
                   </a>
                 </li>
               </ul>
               <a href="#" class="question"></a>
             </div>
           </div>
-          <div class="row">
+          <!-- <div class="row">
             <div class="row_left w4">增值服务</div>
             <div class="row_right">
               <ul>
@@ -417,14 +431,15 @@
               </ul>
               <a href class="question"></a>
             </div>
-          </div>
+          </div> -->
           <div class="row">
             <div class="row_left w2 count">数量</div>
             <div class="row_right count">
-              <a href="#" class="sub"></a>
-              <input type="text" value="1">
-              <a href="#" class="add"></a>
-              <span>正在促销，每人限购
+              <a href="#" class="sub" @click.prevent.stop='changeCount(-1)'></a>
+              <input type="text" value="1" v-model='count'>
+              <a href="#" class="add" @click.prevent.stop='changeCount(1)'></a>
+              <span>
+                正在促销，每人限购
                 <em>1</em>件
               </span>
             </div>
@@ -458,7 +473,7 @@
           </div>
         </div>
       </div>
-			<!--
+      
       <div class="tabarea">
         <ul class="tabarea_item tj_about">
           <li class="active">
@@ -798,7 +813,7 @@
             </div>
           </div>
         </div>
-      </div>-->
+      </div>
     </section>
   </div>
 </template>
@@ -808,40 +823,100 @@ export default {
   name: "product",
   data() {
     return {
-      server:'http://127.0.0.1:3000/',
-			pid : 0,
-			details: [],
-			colors: [],
-			pic: [],
-			size: [],
-			title: '',
-			activeImg: 1, //激活的小图
+      server: "http://127.0.0.1:3000/",
+      pid: 0,
+      details: [],
+      colors: [],
+      pic: [],
+      size: [],
+      title: "",
+      activeImg: 0, //激活的小图
+      activeImgSrc: "",
+      offsetX: 0,
+      offsetY: 0,
+      moveMask: {
+        top: 0,
+        left: 0,
+        display: "block"
+      },
+      lgImg: {
+        top: 0,
+        left: 0,
+        display: "block"
+      },
+      canMove: false,
+      count: 1 //商品个数
     };
   },
-  components:{
+  components: {
     headerToolBar
   },
-  mounted(){
-    this.init()
+  mounted() {
+    this.init();
   },
-  methods:{
-    init(){
-      console.log(this.$route.params)
-      this.pid = this.$route.params.pid
-      this.$axios.get('/detail//getDetails',{
-				params:{
-					pid: this.pid
-				}
-			}).then((res)=>{
-				this.details = res.data.detail
-				this.colors = res.data.colors
-				this.pic = res.data.pic
-				this.size = res.data.size
-				console.log(this.pic)
-      }).catch(err=>{
-        console.log(err)
-      })
+  watch: {
+    // activeImg:{
+    // 	function(oldNum, newNum){
+    // 		this.activeImgSrc = this.pic[newNum].lg
+    // 	}
+    // }
+  },
+  methods: {
+    init() {
+      console.log(this.$route.params);
+      this.pid = this.$route.params.pid;
+      this.$axios
+        .get("/detail//getDetails", {
+          params: {
+            pid: this.pid
+          }
+        })
+        .then(res => {
+          this.details = res.data.detail;
+          this.colors = res.data.colors;
+          this.pic = res.data.pic;
+          this.size = res.data.size;
+          this.activeImgSrc = this.pic[0].lg;
+          // console.log(this.pic)
+        })
+        .catch(err => {
+          console.log(err);
+        });
     },
+    changeImg(i) {
+      //小图显示在大图上
+      this.activeImg = i;
+      this.activeImgSrc = this.pic[this.activeImg].lg;
+    },
+    moveImgMask(event) {
+      this.canMove = true;
+      this.offsetX = event.offsetX;
+      this.offsetY = event.offsetY;
+      this.moveMask.top = event.offsetY - 100;
+      this.moveMask.left = event.offsetX - 100;
+      if (this.moveMask.top < 0) this.moveMask.top = 0;
+      else if (this.moveMask.top > 250) this.moveMask.top = 250;
+      if (this.moveMask.left < 0) this.moveMask.left = 0;
+      else if (this.moveMask.left > 250) this.moveMask.left = 250;
+      // this.lgImg.top = (-800 / 450) * this.moveMask.top;
+      // this.lgImg.left = (-800 / 450) * this.moveMask.left;
+      this.lgImg.top = -(event.offsetY-100)*800/450
+      this.lgImg.left = -(event.offsetX-100)*800/450
+      if(this.lgImg.top < -400) this.lgImg.top = -400
+      else if(this.lgImg.top>0) this.lgImg.top = 0
+      if(this.lgImg.left < -400) this.lgImg.left =-400
+      else if(this.lgImg.left >0) this.lgImg.left =0
+      this.moveMask.top += "px";
+      this.moveMask.left += "px";
+      this.lgImg.top += "px";
+      this.lgImg.left += "px";
+    },
+    leaveImgMask() {
+      this.canMove = false;
+    },
+    changeCount(n){
+      this.count += n
+    }
   }
 };
 </script>
