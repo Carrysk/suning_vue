@@ -10,7 +10,7 @@
 					<a href="#">
 						<i class='tab-icon cart-icon'></i>
 						<span class='cart-title'>购物车</span>
-						<span class='cart-count'>0</span>
+						<span class='cart-count'>{{count}}</span>
 					</a>
 				</div>
 				<div class="msg">
@@ -77,7 +77,12 @@ export default {
     return {
 			server: 'http://127.0.0.1:3000/'
 		}
-  }
+	},
+	computed: {
+		count() {
+			return this.$store.state.count
+		}
+	}
 }
 </script>
 <style scoped>

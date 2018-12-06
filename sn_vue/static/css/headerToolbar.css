@@ -70,7 +70,7 @@ div.top li.location-sp span.btn{
 	margin:9px 0 0 4px;
 }
 div.top li.drop{
-	/*width:81px;*/
+	width:81px;
 	height:37px;
 	box-sizing:border-box;
 	position:relative;
@@ -78,7 +78,8 @@ div.top li.drop{
 div.top li.drop:hover{
 	background:#fff;
 	border:1px solid #ccc;
-	border-bottom:1px solid #fff;
+	border-top: 1px transparent;
+	border-bottom:1px transparent;
 	padding: 0 9px;
 	z-index:1;
 }
@@ -137,10 +138,15 @@ ul.item li{
 	float:left;
 	width:88px;
 	line-height:24px;
+	position: relative;
 }
 div.top li.drop span.btn{
-	margin-left:6px;
-	display:inline-block;
+	position: absolute;
+	top: 13px;
+	right: 10px;
+	/* float: right;
+	margin-top: 13px;
+	margin-right:2px; */
 	width:6px;
 	height:6px;
 	vertical-align:middle;
@@ -169,6 +175,24 @@ div.drop-2 ul.item li,div.drop-3 ul.item li{
 li.drop-3:hover div.drop-3{
 	display:block;
 	right:-1px;
+}
+li.drop-logout>a{
+	width: 51px;
+	display: inline-block;
+	padding-right: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+li.drop-logout:hover div.drop-logout{
+	display: block;
+}
+div.drop-logout{
+	position: absolute;
+	display: none;
+	width: 69px;
+	top: 35px;
+	left:-1px;
+	padding: 8px 0 8px 10px;
 }
 div.drop-4{
 	display:none;

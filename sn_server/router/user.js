@@ -70,4 +70,27 @@ router.post('/register', (req, res) => {
   })
 })
 
+router.post('/isLogin',(req,res)=>{
+  var uid = req.session.uid
+  var sql = 'SELECT uid,uname FROM sn_user WHERE uid = ?'
+  pool.query(sql,[uid],(err,result)=>{
+    if(err) throw err
+    if(result.length>0)
+      res.send(JSON.stringify({code:200,uname:result[0].uname}))
+    else
+      res.send(JSON.stringify({code:300,msg:'尚未登录'}))
+  })
+})
+
+//注销
+router.post('/logout',(req,res)=>{
+  //判断是否session.uid 是否为undefined
+  if(typeof(req.session.uid)=='undefined'){
+    res.send(JSON.stringify({code:300, msg:'已注销'}))
+    return 
+  }
+  req.session.uid = null
+  res.send(JSON.stringify({code: 200, msg:'成功注销'}))
+})
+
 module.exports = router;

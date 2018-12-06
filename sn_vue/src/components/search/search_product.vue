@@ -31,7 +31,7 @@
         <a href="javascript:" class="collect">
           <i></i>收藏
         </a>
-        <a href="javascript:" class="addCart">
+        <a href="javascript:" class="addCart" @click.prevent.stop="addCart">
           <i></i>加入购物车
         </a>
       </div>
@@ -54,6 +54,9 @@ export default {
           pid: this.product.pid
         }
       });
+    },
+    addCart(){
+      this.$store.commit('increment',1)
     }
   }
 };
