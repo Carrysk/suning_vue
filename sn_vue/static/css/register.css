@@ -41,6 +41,7 @@ form p.gift{
 	margin-bottom: 17px;
 	width: 345px; height: 17px;
 	line-height: 17px;font-size: 14px;
+	color: #333;
 }
 form p.gift i{
 	float: left;
@@ -105,24 +106,37 @@ form .form-input .in .ok{
 }
 /*****************  验证  ********************/
 form .form-input .tip{
-	visibility: hidden;
 	color: #f00;
 	width: 380px;
 }
+form .phone-number,form .phone-verify, form .pwd{
+	position: relative;
+}
 form .phone-number div.tip{
 	height: 24px;line-height: 24px;
+	top: 40px;
+	position: absolute;
+}
+form .phone-number div.in{
+	margin-bottom: 24px;
 }
 form .phone-verify div.tip{
 	height: 32px;line-height: 32px;
+	position: absolute;
+	top: 40px;
+}
+form .phone-verify div.in{
+	margin-bottom: 32px;
+}
+form .pwd div.in{
+	margin-bottom: 50px;
 }
 form .pwd div.tip{
 	height: 50px;line-height: 20px;
-}
-form .pwd div.tip .errorTip{
-	display: none;
+	position: absolute;
+	top: 40px;
 }
 form .pwd div.tip .importTip{
-	visibility: hidden;
 	color: #999;
 }
 form .pwd div.tip a{
@@ -140,9 +154,7 @@ form .pwd div.tip .safeRank span{
 	color: #fff;
 	background: #cacaca;
 }
-form .pwd div.tip .safeRank .act{
-	background: #fa0;
-}
+
 form .rule{
 	width: 380px;height: 20px;line-height: 20px;
 }
@@ -182,54 +194,3 @@ form a.etp i{
 
 
 
-
-
-
-
-
-footer{
-	width: 990px;
-	margin: 20px auto 0 auto;
-	text-align: center;
-	position: relative;
-}
-footer ul:after{
-	content: '';
-	display: block;
-	clear: left;
-}
-footer ul li{
-	display: inline-block;
-	height:12px;line-height:12px;
-	margin:6px 0;
-	padding:0 8px;
-	font-size:12px;
-	color:#ccc;
-	border-right:1px solid #bbb;
-	font-family:"Microsoft Yahei";
-}
-footer ul li:last-child{
-	border-right: 0;
-}
-footer ul li a{
-	color: #666;
-}
-footer ul li a:hover{
-	text-decoration: underline;	
-}
-footer .gongan{
-	position: relative;
-	margin-left: 25px;
-}
-footer .gongan span{
-	position: absolute;
-	left: -20px;
-	top:-3px;
-	display: inline-block;
-	width: 20px;height: 20px;
-	background: url('../img/login/gwab-icon.png')
-}
-footer ul:last-child li{
-	border-right: 0;
-	padding:0 2px;
-}

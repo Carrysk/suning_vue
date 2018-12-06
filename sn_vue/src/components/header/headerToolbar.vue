@@ -5,7 +5,7 @@
 		<div class="top-nav" :class="isLarge ? 'w-1400':''">
 			<ul class='top-left'>
 				<li v-show='isIndex'>
-					<a href="javascript:void(0)">返回首页</a>
+					<a href="javascript:void(0)" @click.prevent.stop='jumpIndex'>返回首页</a>
 				</li>
 				<li class='drop drop-1'>
 					<a href="#">网站导航<span class='btn'></span></a>
@@ -124,10 +124,10 @@
 			</ul>
 			<ul class='top-right'>
 				<li>
-					<a href="login.html" @click.prevent.stop="login">请登录</a>
+					<a href="login.html" @click.prevent.stop="jumpLogin">请登录</a>
 				</li>
 				<li>
-					<a href="registry.html" class='active'>注册有礼</a>
+					<a href="registry.html" class='active' @click.prevent.stop='jumpSignIn'>注册有礼</a>
 				</li>
 				<li class='drop drop-4'>
 					<a href="#">我的订单<span class='btn'></span></a>
@@ -214,13 +214,19 @@ export default {
 	},
 	props:[ 'isLarge', 'isIndex'],
 	methods:{
-		login(){
+		jumpLogin(){
 			this.$router.push({
 				name:'LoginContainer',
 				params:{
 					from: this.$route.path
 				}
 			})
+		},
+		jumpIndex(){
+			this.$router.push('/index')
+		},
+		jumpSignIn(){
+			this.$router.push('/register')
 		}
 	}
 };

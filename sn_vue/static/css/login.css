@@ -102,10 +102,10 @@ section .main>a{
 	line-height: 40px;
 }
 .uname-login .loginWarn{
-	height: 36px; line-height: 36px;
+	height: 38px; line-height: 38px;
 	font-size: 12px;
 	position: absolute;
-	top: 1px;
+	top: 0px;
 	width: 100%;
 	font-size: 12px;
 	font-weight: 700;

@@ -2,7 +2,7 @@ footer{
 	width: 100%;
 	text-align: center;
 	position: relative;
-	background-color: #f7f7f7;
+	background-color: #f8f8f8;
 }
 
 div.about{
@@ -32,6 +32,7 @@ div.about ul li a{
 }
 div.about ul li a:hover{
 	text-decoration: underline;	
+	color: #f60;
 }
 div.about .gongan{
 	position: relative;

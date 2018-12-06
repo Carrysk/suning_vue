@@ -5,11 +5,12 @@ import App from './App'
 import router from './router'
 import axios from 'axios'
 import VueLazyLoad from 'vue-lazyload'
+import querystring from 'querystring'
 
 Vue.config.productionTip = false
 
 axios.defaults.baseURL = 'http://127.0.0.1:3000/'
-axios.defaults.headers.post['Content-Type'] = 'application/x-www.form-urlencoded'
+axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'
 Vue.prototype.$axios = axios
 
 //引入lazyload
@@ -20,6 +21,7 @@ Vue.use(VueLazyLoad, {
   attempt: 1,
   listenEvents: [ 'scroll' ]
 })
+Vue.prototype.$qs = querystring
 
 /* eslint-disable no-new */
 new Vue({
