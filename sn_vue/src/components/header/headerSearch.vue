@@ -9,7 +9,7 @@
       <!-- 促销动图-->
       <div class="top-info">
         <a href="#">
-          <img v-lazy="server+'img/index/info.gif'" v-if="!isLarge">
+          <img v-lazy="server+'img/index/info.gif'" v-if="isAd">
         </a>
       </div>
       <!--搜索框-->
@@ -19,7 +19,7 @@
           <div class="search-keyword" :class=" isLarge?'w-1400-search':''">
             <input type="text" value="把酒欢庆 149减30" v-model="msg">
           </div>
-          <input type="submit" class="btn" value="搜索" @click.13.prevent.stop='handleSearch'>
+          <input type="submit" class="btn" value="搜索" @click.13.prevent.stop="handleSearch">
         </form>
         <ul class="search-word">
           <li>
@@ -59,71 +59,71 @@ export default {
       server: "http://127.0.0.1:3000/",
       // msg: 'iPhone',
       pageCount: 0,
-      msg: ''
+      msg: ""
     };
   },
-  computed:{
+  computed: {
     // msg :function(){
     //   if(!this.msg)
     //     return 'iPhone'
     // }
   },
-  watch:{
-    pno(val,oldVal){
-      this.search()
+  watch: {
+    pno(val, oldVal) {
+      this.search();
       // console.log('pno is change'+this.pno)
     },
-    hasMsg(val,oldVal){
-      this.search()
+    hasMsg(val, oldVal) {
+      this.search();
     }
   },
-  props: ["isLarge",'pno','pageSize', 'hasMsg'],
-  mounted(){
-    if(this.$route.params.msg!=undefined)
-      this.msg = this.$route.params.msg;
+  props: ["isLarge", "pno", "pageSize", "hasMsg", "isAd"],
+  mounted() {
+    if (this.$route.params.msg != undefined) this.msg = this.$route.params.msg;
     // this.search()
-    this.msg = 'iPhone'
-    if(this.pno>=1)
-      this.search()
-    
+    this.msg = "iPhone";
+    if (this.pno >= 1) this.search();
   },
-  methods:{
-    handleSearch(){
+  methods: {
+    handleSearch() {
       this.$router.push({
         // path: `/search/${this.msg}`,
-        name: 'SearchContainer',
-        params:{
-          msg : this.msg
+        name: "SearchContainer",
+        params: {
+          msg: this.msg
         }
-      })
-      this.search()
-      
+      });
+      this.search();
     },
-    search(){
+    search() {
       // console.log(this.route.params)
       // console.log(this.msg)
       //http://127.0.0.1:3000/product/search?msg=iPhone&pageSize=5&pno=1
-      this.$axios.get('/product/search', {
-        params: {
-          msg : this.msg,
-          pageSize : this.pageSize,
-          pno : this.pno
-        }
-      }).then((res)=>{
-        console.log(this.msg)
-        console.log(res.data)
-        this.pageCount = res.data.pageCount
-        this.products = res.data.products
-      }).then(()=>{
-        this.$emit('searchProduct',{
-          pno: this.pno,
-          pageCount: this.pageCount,
-          products: this.products,
-          msg: this.msg
+      this.$axios
+        .get("/product/search", {
+          params: {
+            msg: this.msg,
+            pageSize: this.pageSize,
+            pno: this.pno
+          }
         })
-      }).catch(err=>{
-        console.log(err)
-      })
+        .then(res => {
+          console.log(this.msg);
+          console.log(res.data);
+          this.pageCount = res.data.pageCount;
+          this.products = res.data.products;
+        })
+        .then(() => {
+          this.$emit("searchProduct", {
+            pno: this.pno,
+            pageCount: this.pageCount,
+            products: this.products,
+            msg: this.msg
+          });
+        })
+        .catch(err => {
+          console.log(err);
+        });
     }
   }
 };
@@ -137,9 +137,9 @@ export default {
   width: 1390px;
 }
 .headerSearch .w-1400-search {
-	width: 650px !important;
+  width: 650px !important;
 }
-.headerSearch .w-1400-search>input{
+.headerSearch .w-1400-search > input {
   width: 600px;
 }
 </style>

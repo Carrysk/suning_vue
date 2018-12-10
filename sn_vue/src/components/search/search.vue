@@ -1,6 +1,6 @@
 <template>
   <div class="search">
-    <header-tool-bar :isLarge='true' :isIndex='true'></header-tool-bar>
+    <header-tool-bar :isLarge='true'></header-tool-bar>
     <header-search :isLarge='true' :hasMsg='hasMsg' :pno='pno' :pageSize='pageSize' @searchProduct='handleSearch($event)'></header-search>
     <header-nav-bar :isShow='true' :isLarge='true'></header-nav-bar>
     <div class="container">

@@ -9,7 +9,7 @@
       </div>
     </div>
     <header-tool-bar :isLarge='false' :isIndex='true'></header-tool-bar>
-    <header-search class="search" :isLarge='false'></header-search>
+    <header-search class="search" :isAd='true'></header-search>
     <header-nav-bar :isLarge='false'></header-nav-bar>
     <!--轮播图-->
     <section class="carousel-floor">

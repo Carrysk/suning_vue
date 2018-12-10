@@ -4,7 +4,7 @@
     <div class="top clear">
       <div class="top-nav" :class="isLarge ? 'w-1400':''">
         <ul class="top-left">
-          <li v-show="isIndex">
+          <li v-show="!isIndex">
             <a href="javascript:void(0)" @click.prevent.stop="jumpIndex">返回首页</a>
           </li>
           <li class="drop drop-1">

@@ -1,6 +1,6 @@
 <template>
   <div class="product">
-    <header-tool-bar :isIndex="true"></header-tool-bar>
+    <header-tool-bar :isIndex="false"></header-tool-bar>
 
     <header>
       <div class="bottom clear">
